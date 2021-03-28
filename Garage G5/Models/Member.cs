@@ -24,7 +24,14 @@ namespace Garage_G5.Models
 
         public string FullName { get => FirstName + " " + LastName; }
 
-        public List<ParkedVehicle> MemberVehicles { get; set; }
+        //Navigation property
+        public List<Vehicle> Vehicles { get; set; }
+
+
+        //Many to many 
+        public ICollection<TypeOfVehicle> TypesOfVehicles{ get; set; }
+
+
 
     }
 }

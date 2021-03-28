@@ -17,7 +17,9 @@ namespace Garage_G5.Models
         public int? ExtraHourlyRate { get; set; }
         public int Size { get; set; }
 
-        //public List<TypeOfVehicle> TypeOfVehicles { get; set; }
-        //public ICollection<ParkedVehicle> ParkedVehicles { get; set; }
+
+        public ICollection<Vehicle> Vehicles { get; set; }
+        //Many to many 
+        public ICollection<Member> Members { get; set; }
     }
 }
